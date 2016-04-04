@@ -1,3 +1,6 @@
+import tensorflow as tf
+
+
 def load_mnist_data():
     from tensorflow.examples.tutorials.mnist import input_data
     mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
@@ -5,7 +8,10 @@ def load_mnist_data():
 
 
 def softmax_regression_model():
-    import tensorflow as tf
+    """
+    Simplistic example of TF using a regression model
+    :return:
+    """
 
     # training data
     mnist = load_mnist_data()
