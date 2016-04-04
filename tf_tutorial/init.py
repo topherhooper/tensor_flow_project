@@ -1,3 +1,14 @@
-from tensorflow.examples.tutorials.mnist import input_data
+import tensorflow
 
-mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
+
+def hello_world():
+    hello = tensorflow.constant('Hello, Tensorflow!')
+    sess = tensorflow.Session()
+    print sess.run(hello)
+    a = tensorflow.constant(10)
+    b = tensorflow.constant(32)
+    print  sess.run(a + b)
+
+
+if __name__ == '__main__':
+    hello_world()
