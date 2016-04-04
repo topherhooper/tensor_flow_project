@@ -34,7 +34,7 @@ def softmax_regression_model():
     # check
     correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))  # list of bools
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))  # converts list of bools to acc
-    print accuracy
+    print(accuracy.eval(feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
 
 
 def hello_world():
